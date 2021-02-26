@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+*, ::after, ::before {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: rgb(182, 178, 178);
+}
+
