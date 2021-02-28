@@ -7,14 +7,15 @@ import Header from "./Header";
 import Container from "./Container";
 import { useState } from "react";
 
-const tasks = [
-  { id: 1, content: "switch to React", done: false },
-  { id: 2, content: "study more and more", done: true },
-];
+
 
 
 function App() {
   const [hideDone, setHideDone] = useState(false);
+  const [tasks, setTasks] = useState([
+    { id: 1, content: "switch to React", done: false },
+    { id: 2, content: "study more and more", done: true },
+  ]);
 
   const toggleHideDone = () => {
     setHideDone(hideDone => !hideDone);
