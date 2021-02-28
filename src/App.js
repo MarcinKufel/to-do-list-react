@@ -20,6 +20,12 @@ function App() {
   const toggleHideDone = () => {
     setHideDone(hideDone => !hideDone);
   };
+
+  const removeTasks = (id) => {
+    setTasks(tasks => tasks.filter(task => task.id !== id));
+  };
+
+
   return (
     <Container>
       <Header title="To do list" />
@@ -30,7 +36,7 @@ function App() {
 
       <Section
         title="To do list"
-        body={<Tasks tasks={tasks} hideDone={hideDone} />}
+        body={<Tasks tasks={tasks} hideDone={hideDone} removeTask={removeTasks} />}
         extraHeaderContent={
           <Buttons
             tasks={tasks}
